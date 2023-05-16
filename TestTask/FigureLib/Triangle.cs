@@ -45,5 +45,13 @@ namespace FigureLib
 
             return Math.Sqrt(halfP * (halfP - _a) * (halfP - _b) * (halfP - _c));
         }
+
+        public bool IsRectangular()
+        {
+            List<double> q = new List<double>() { _a, _b, _c };
+            q.Sort();
+
+            return Math.Pow(q.ElementAt(2), 2) == Math.Pow(q.ElementAt(1), 2) + Math.Pow(q.ElementAt(0), 2);
+        }
     }
 }

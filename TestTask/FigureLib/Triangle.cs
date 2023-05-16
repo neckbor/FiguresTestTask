@@ -12,6 +12,13 @@ namespace FigureLib
         private double _b;
         private double _c;
 
+        /// <summary>
+        /// Initializes a new instanse of Triangle class
+        /// </summary>
+        /// <param name="a">Side A</param>
+        /// <param name="b">Side B</param>
+        /// <param name="c">Side C</param>
+        /// <exception cref="ArgumentException">In case argument is less than zero or triangle is impossible with given sides</exception>
         public Triangle(double a, double b, double c)
         {
             if (a < 0)
@@ -46,6 +53,10 @@ namespace FigureLib
             return Math.Sqrt(halfP * (halfP - _a) * (halfP - _b) * (halfP - _c));
         }
 
+        /// <summary>
+        /// Indicates where triangle is rectangular
+        /// </summary>
+        /// <returns></returns>
         public bool IsRectangular()
         {
             List<double> q = new List<double>() { _a, _b, _c };

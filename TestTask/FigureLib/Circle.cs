@@ -4,6 +4,11 @@
     {
         private double _radius;
 
+        /// <summary>
+        /// Initializes a new instance of Circle class
+        /// </summary>
+        /// <param name="radius">Radius</param>
+        /// <exception cref="ArgumentException">In case radius is less than zero</exception>
         public Circle(double radius)
         {
             if (radius < 0)

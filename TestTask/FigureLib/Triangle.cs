@@ -41,7 +41,9 @@ namespace FigureLib
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            double halfP = (_a + _b + _c) / 2;
+
+            return Math.Sqrt(halfP * (halfP - _a) * (halfP - _b) * (halfP - _c));
         }
     }
 }
